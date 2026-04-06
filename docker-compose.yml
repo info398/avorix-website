@@ -10,7 +10,7 @@ services:
       # HTTPS Router
       - "traefik.http.routers.website.rule=Host(`avorix.cloud`) || Host(`www.avorix.cloud`)"
       - "traefik.http.routers.website.entrypoints=websecure"
-      - "traefik.http.routers.website.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.website.tls.certresolver=le"
       - "traefik.http.routers.website.middlewares=www-redirect"
       # HTTP -> HTTPS Redirect
       - "traefik.http.routers.website-http.rule=Host(`avorix.cloud`) || Host(`www.avorix.cloud`)"
