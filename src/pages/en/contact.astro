@@ -21,7 +21,11 @@ const t = useTranslations("en");
           </div>
         </div>
 
-        <form class="space-y-4" action="#" method="POST">
+        <form class="space-y-4" action="https://formsubmit.co/info@avorix.cloud" method="POST">
+          <input type="hidden" name="_next" value="https://avorix.cloud/en/contact" />
+          <input type="hidden" name="_subject" value="New contact request from avorix.cloud" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" style="display:none" />
           <div>
             <label for="name" class="block text-sm font-medium text-avorix-dark mb-1">
               {t("contact.form.name")}
