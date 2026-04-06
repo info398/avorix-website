@@ -15,7 +15,7 @@ export const ui = {
     "hero.tagline": "Qualit\u00e4t ohne Fachkr\u00e4fte-Abh\u00e4ngigkeit",
     "hero.subtitle":
       "Avorix erm\u00f6glicht Hotels und Gastronomiebetrieben, qualitativ hochwertige Gerichte konsistent anzubieten \u2014 auch ohne ausgebildete K\u00f6che.",
-    "hero.cta": "Mehr erfahren",
+    "hero.cta": "Demo vereinbaren",
     "benefits.title": "Warum Avorix",
     "benefits.1.title": "Konsistente Qualit\u00e4t",
     "benefits.1.text":
@@ -59,7 +59,7 @@ export const ui = {
     "hero.tagline": "Quality Without Staff Dependency",
     "hero.subtitle":
       "Avorix enables hotels and restaurants to consistently serve high-quality dishes — even without trained chefs.",
-    "hero.cta": "Learn more",
+    "hero.cta": "Book a Demo",
     "benefits.title": "Why Avorix",
     "benefits.1.title": "Consistent Quality",
     "benefits.1.text":
