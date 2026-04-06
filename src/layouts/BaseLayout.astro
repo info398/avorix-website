@@ -7,10 +7,21 @@ import { getLangFromUrl } from "../i18n/translations";
 interface Props {
   title: string;
   description?: string;
+  ogImage?: string;
+  ogType?: string;
 }
 
-const { title, description = "Avorix \u2014 Qualit\u00e4t ohne Fachkr\u00e4fte-Abh\u00e4ngigkeit" } = Astro.props;
+const {
+  title,
+  description = "Avorix \u2014 Qualit\u00e4t ohne Fachkr\u00e4fte-Abh\u00e4ngigkeit",
+  ogImage = "/og-image.png",
+  ogType = "website",
+} = Astro.props;
 const lang = getLangFromUrl(Astro.url);
+const siteUrl = Astro.site?.toString().replace(/\/$/, "") ?? "https://avorix.cloud";
+const canonicalUrl = `${siteUrl}${Astro.url.pathname}`;
+const ogImageUrl = `${siteUrl}${ogImage}`;
+const fullTitle = `${title} | Avorix`;
 ---
 
 <!doctype html>
@@ -19,11 +30,29 @@ const lang = getLangFromUrl(Astro.url);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Avorix" />
+    <meta property="og:locale" content={lang === "en" ? "en_US" : "de_DE"} />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <title>{title} | Avorix</title>
+    <title>{fullTitle}</title>
   </head>
   <body class="bg-white text-avorix-dark font-sans antialiased">
     <Header />
