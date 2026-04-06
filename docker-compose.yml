@@ -1,0 +1,26 @@
+services:
+  website:
+    build: .
+    container_name: avorix-website
+    restart: unless-stopped
+    networks:
+      - traefik-proxy
+    labels:
+      - "traefik.enable=true"
+      # HTTPS Router
+      - "traefik.http.routers.website.rule=Host(`avorix.cloud`) || Host(`www.avorix.cloud`)"
+      - "traefik.http.routers.website.entrypoints=websecure"
+      - "traefik.http.routers.website.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.website.middlewares=www-redirect"
+      # HTTP -> HTTPS Redirect
+      - "traefik.http.routers.website-http.rule=Host(`avorix.cloud`) || Host(`www.avorix.cloud`)"
+      - "traefik.http.routers.website-http.entrypoints=web"
+      - "traefik.http.routers.website-http.middlewares=redirect-to-https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+      # www -> non-www Redirect
+      - "traefik.http.middlewares.www-redirect.redirectregex.regex=^https://www\\.avorix\\.cloud/(.*)"
+      - "traefik.http.middlewares.www-redirect.redirectregex.replacement=https://avorix.cloud/$${1}"
+
+networks:
+  traefik-proxy:
+    external: true

@@ -1,0 +1,53 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/translations";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-avorix-dark text-avorix-silver">
+  <div class="max-w-6xl mx-auto px-6 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Logo & Beschreibung -->
+      <div>
+        <img src="/logo.png" alt="Avorix" class="h-8 brightness-200 mb-4" />
+        <p class="text-sm text-avorix-silver/70 max-w-xs">
+          {lang === "de"
+            ? "Software und Prozesse f\u00fcr konsistente K\u00fcchenqualit\u00e4t in der Hotellerie."
+            : "Software and processes for consistent kitchen quality in hospitality."}
+        </p>
+      </div>
+
+      <!-- Navigation -->
+      <div>
+        <h3 class="text-avorix-white font-semibold text-sm mb-4">Navigation</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href={lang === "de" ? "/" : "/en"} class="hover:text-avorix-white transition-colors">{t("nav.home")}</a></li>
+          <li><a href={lang === "de" ? "/ueber-uns" : "/en/about"} class="hover:text-avorix-white transition-colors">{t("nav.about")}</a></li>
+          <li><a href={lang === "de" ? "/kontakt" : "/en/contact"} class="hover:text-avorix-white transition-colors">{t("nav.contact")}</a></li>
+        </ul>
+      </div>
+
+      <!-- Kontakt -->
+      <div>
+        <h3 class="text-avorix-white font-semibold text-sm mb-4">{t("contact.title")}</h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href="mailto:info@avorix.cloud" class="hover:text-avorix-white transition-colors">
+              info@avorix.cloud
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-avorix-gray/30 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-avorix-silver/50">
+      <p>&copy; {year} Avorix. {t("footer.rights")}</p>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-avorix-silver transition-colors">{t("footer.imprint")}</a>
+        <a href="#" class="hover:text-avorix-silver transition-colors">{t("footer.privacy")}</a>
+      </div>
+    </div>
+  </div>
+</footer>

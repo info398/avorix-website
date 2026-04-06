@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --color-avorix-dark: #1a1a1a;
+  --color-avorix-gray: #4a4a4a;
+  --color-avorix-silver: #9a9a9a;
+  --color-avorix-light: #e8e8e8;
+  --color-avorix-white: #f5f5f5;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+}

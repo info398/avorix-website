@@ -1,0 +1,31 @@
+---
+import { getLangFromUrl, languages } from "../i18n/translations";
+
+const lang = getLangFromUrl(Astro.url);
+const otherLang = lang === "de" ? "en" : "de";
+
+// Map current path to equivalent in other language
+const pathname = Astro.url.pathname;
+let otherPath: string;
+
+if (lang === "de") {
+  // DE -> EN
+  if (pathname === "/" || pathname === "") otherPath = "/en";
+  else if (pathname === "/ueber-uns") otherPath = "/en/about";
+  else if (pathname === "/kontakt") otherPath = "/en/contact";
+  else otherPath = `/en${pathname}`;
+} else {
+  // EN -> DE
+  if (pathname === "/en" || pathname === "/en/") otherPath = "/";
+  else if (pathname === "/en/about") otherPath = "/ueber-uns";
+  else if (pathname === "/en/contact") otherPath = "/kontakt";
+  else otherPath = pathname.replace(/^\/en/, "");
+}
+---
+
+<a
+  href={otherPath}
+  class="text-sm font-medium text-avorix-silver hover:text-avorix-dark transition-colors border border-avorix-light rounded-md px-3 py-1"
+>
+  {languages[otherLang]}
+</a>

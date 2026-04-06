@@ -1,0 +1,23 @@
+---
+import { getLangFromUrl, useTranslations, getLocalizedPath } from "../i18n/translations";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="pt-32 pb-20 px-6">
+  <div class="max-w-4xl mx-auto text-center">
+    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-avorix-dark leading-tight mb-6">
+      {t("hero.tagline")}
+    </h1>
+    <p class="text-lg md:text-xl text-avorix-gray max-w-2xl mx-auto mb-10 leading-relaxed">
+      {t("hero.subtitle")}
+    </p>
+    <a
+      href={getLocalizedPath(lang === "de" ? "/ueber-uns" : "/about", lang)}
+      class="inline-block bg-avorix-dark text-white px-8 py-3 rounded-lg text-sm font-semibold hover:bg-avorix-gray transition-colors"
+    >
+      {t("hero.cta")}
+    </a>
+  </div>
+</section>

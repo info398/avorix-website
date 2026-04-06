@@ -1,0 +1,73 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { useTranslations } from "../i18n/translations";
+
+const t = useTranslations("de");
+---
+
+<BaseLayout title="Kontakt" description="Nehmen Sie Kontakt mit Avorix auf.">
+  <section class="pt-32 pb-20 px-6">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="text-4xl font-bold text-avorix-dark mb-4">{t("contact.title")}</h1>
+      <p class="text-lg text-avorix-gray mb-12">{t("contact.intro")}</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Kontaktdaten -->
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-sm font-semibold text-avorix-dark mb-1">{t("contact.email")}</h3>
+            <a href="mailto:info@avorix.cloud" class="text-avorix-gray hover:text-avorix-dark transition-colors">
+              info@avorix.cloud
+            </a>
+          </div>
+        </div>
+
+        <!-- Kontaktformular -->
+        <form class="space-y-4" action="#" method="POST">
+          <div>
+            <label for="name" class="block text-sm font-medium text-avorix-dark mb-1">
+              {t("contact.form.name")}
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              class="w-full px-4 py-2 border border-avorix-light rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-avorix-dark/20 focus:border-avorix-dark"
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-avorix-dark mb-1">
+              {t("contact.form.email")}
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              class="w-full px-4 py-2 border border-avorix-light rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-avorix-dark/20 focus:border-avorix-dark"
+            />
+          </div>
+          <div>
+            <label for="message" class="block text-sm font-medium text-avorix-dark mb-1">
+              {t("contact.form.message")}
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              required
+              class="w-full px-4 py-2 border border-avorix-light rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-avorix-dark/20 focus:border-avorix-dark resize-none"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            class="bg-avorix-dark text-white px-6 py-2.5 rounded-lg text-sm font-semibold hover:bg-avorix-gray transition-colors"
+          >
+            {t("contact.form.submit")}
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
