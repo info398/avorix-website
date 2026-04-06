@@ -13,12 +13,16 @@ if (lang === "de") {
   if (pathname === "/" || pathname === "") otherPath = "/en";
   else if (pathname === "/ueber-uns") otherPath = "/en/about";
   else if (pathname === "/kontakt") otherPath = "/en/contact";
+  else if (pathname === "/impressum") otherPath = "/en/legal-notice";
+  else if (pathname === "/datenschutz") otherPath = "/en/privacy";
   else otherPath = `/en${pathname}`;
 } else {
   // EN -> DE
   if (pathname === "/en" || pathname === "/en/") otherPath = "/";
   else if (pathname === "/en/about") otherPath = "/ueber-uns";
   else if (pathname === "/en/contact") otherPath = "/kontakt";
+  else if (pathname === "/en/legal-notice") otherPath = "/impressum";
+  else if (pathname === "/en/privacy") otherPath = "/datenschutz";
   else otherPath = pathname.replace(/^\/en/, "");
 }
 ---

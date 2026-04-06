@@ -45,8 +45,8 @@ const year = new Date().getFullYear();
     <div class="border-t border-avorix-gray/30 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-avorix-silver/50">
       <p>&copy; {year} Avorix. {t("footer.rights")}</p>
       <div class="flex gap-6">
-        <a href="#" class="hover:text-avorix-silver transition-colors">{t("footer.imprint")}</a>
-        <a href="#" class="hover:text-avorix-silver transition-colors">{t("footer.privacy")}</a>
+        <a href={lang === "de" ? "/impressum" : "/en/legal-notice"} class="hover:text-avorix-silver transition-colors">{t("footer.imprint")}</a>
+        <a href={lang === "de" ? "/datenschutz" : "/en/privacy"} class="hover:text-avorix-silver transition-colors">{t("footer.privacy")}</a>
       </div>
     </div>
   </div>
