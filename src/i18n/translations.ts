@@ -16,6 +16,8 @@ export const ui = {
     "hero.subtitle":
       "Avorix erm\u00f6glicht Hotels und Gastronomiebetrieben, qualitativ hochwertige Gerichte konsistent anzubieten \u2014 auch ohne ausgebildete K\u00f6che.",
     "hero.cta": "Demo vereinbaren",
+    "hero.secondary_cta": "Mehr erfahren",
+    "hero.cta_note": "Kostenlos & unverbindlich",
     "benefits.title": "Warum Avorix",
     "benefits.1.title": "Konsistente Qualit\u00e4t",
     "benefits.1.text":
@@ -39,9 +41,10 @@ export const ui = {
     "about.focus.title": "Unser Fokus",
     "about.focus.text":
       "Wir starten mit 4-Sterne-Ferienhotels in Tirol und Salzburg \u2014 Betrieben, in denen Halbpension das Kernversprechen ist und die K\u00fcche t\u00e4glich unter Druck steht, konstante Qualit\u00e4t zu liefern.",
-    "contact.title": "Kontakt",
+    "contact.eyebrow": "Kostenloses Erstgespräch",
+    "contact.title": "Demo vereinbaren",
     "contact.intro":
-      "Interessiert an Avorix? Wir freuen uns auf Ihre Nachricht.",
+      "Lernen Sie Avorix in einem persönlichen Demo-Gespräch kennen. Wir zeigen Ihnen, wie unsere Lösung Ihren Küchenbetrieb konkret unterstützt.",
     "contact.email": "E-Mail",
     "contact.phone": "Telefon",
     "contact.form.name": "Name",
@@ -60,6 +63,8 @@ export const ui = {
     "hero.subtitle":
       "Avorix enables hotels and restaurants to consistently serve high-quality dishes — even without trained chefs.",
     "hero.cta": "Book a Demo",
+    "hero.secondary_cta": "Learn more",
+    "hero.cta_note": "Free & no obligation",
     "benefits.title": "Why Avorix",
     "benefits.1.title": "Consistent Quality",
     "benefits.1.text":
@@ -82,8 +87,9 @@ export const ui = {
     "about.focus.title": "Our Focus",
     "about.focus.text":
       "We start with 4-star resort hotels in Tyrol and Salzburg — properties where half-board is the core promise and the kitchen faces daily pressure to deliver consistent quality.",
-    "contact.title": "Contact",
-    "contact.intro": "Interested in Avorix? We look forward to hearing from you.",
+    "contact.eyebrow": "Free Initial Consultation",
+    "contact.title": "Book a Demo",
+    "contact.intro": "Get to know Avorix in a personal demo call. We'll show you exactly how our solution supports your kitchen operations.",
     "contact.email": "Email",
     "contact.phone": "Phone",
     "contact.form.name": "Name",
