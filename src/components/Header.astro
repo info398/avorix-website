@@ -6,11 +6,11 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<header class="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-avorix-light z-50">
+<header class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-brand-100 z-50">
   <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
     <a href={getLocalizedPath("/", lang)} class="flex items-center gap-3">
       <img src="/logo-dark.jpg" alt="Avorix" class="h-9 rounded" />
-      <span class="text-xl font-semibold tracking-tight text-avorix-dark">AVORIX</span>
+      <span class="text-xl font-semibold tracking-tight text-brand-600">AVORIX</span>
     </a>
 
     <div class="hidden md:flex items-center gap-8">
@@ -20,7 +20,7 @@ const t = useTranslations(lang);
       <a href={getLocalizedPath(lang === "de" ? "/ueber-uns" : "/about", lang)} class="text-avorix-gray hover:text-avorix-dark transition-colors text-sm font-medium">
         {t("nav.about")}
       </a>
-      <a href={getLocalizedPath(lang === "de" ? "/kontakt" : "/contact", lang)} class="text-avorix-gray hover:text-avorix-dark transition-colors text-sm font-medium">
+      <a href={getLocalizedPath(lang === "de" ? "/kontakt" : "/contact", lang)} class="bg-brand-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-brand-600 transition-colors">
         {t("nav.contact")}
       </a>
       <LanguageSwitcher />
