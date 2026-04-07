@@ -1,0 +1,286 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Kostenloser Leitfaden: 5 Strategien gegen den Fachkräftemangel in der Küche",
+  "description": "Praxisnaher Leitfaden für Hoteliers und Küchenchefs in Tirol & Salzburg. Jetzt kostenlos herunterladen.",
+  "url": "https://avorix.cloud/leitfaden",
+  "inLanguage": "de",
+};
+---
+
+<BaseLayout
+  title="Kostenloser Leitfaden: 5 Strategien gegen den Fachkräftemangel in der Küche"
+  description="Praxisnaher Leitfaden für Hoteliers und Küchenchefs: 5 bewährte Strategien gegen den Fachkräftemangel in der Küche. Kostenlos herunterladen."
+  schemaOrg={schema}
+>
+  <section class="pt-28 pb-16 px-6 bg-white">
+    <div class="max-w-4xl mx-auto">
+
+      <!-- Hero -->
+      <div class="text-center mb-12">
+        <span class="inline-block bg-brand-50 text-brand-600 text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full mb-4">
+          Kostenloser Leitfaden
+        </span>
+        <h1 class="text-4xl md:text-5xl font-bold text-avorix-dark leading-tight mb-4">
+          5 Strategien, mit denen Hotels den<br class="hidden md:block" />
+          <span class="text-brand-600">Fachkräftemangel in der Küche</span> meistern
+        </h1>
+        <p class="text-lg text-avorix-gray max-w-2xl mx-auto">
+          Ein praxisnaher Leitfaden für Hoteliers und Küchenchefs in Tirol & Salzburg — kostenlos, sofort verfügbar.
+        </p>
+      </div>
+
+      <!-- Two-column layout: Preview + Form -->
+      <div class="grid md:grid-cols-2 gap-12 items-start">
+
+        <!-- Left: What's inside -->
+        <div>
+          <h2 class="text-lg font-semibold text-avorix-dark mb-6">Das erwartet Sie im Leitfaden:</h2>
+
+          <ul class="space-y-4 mb-8">
+            {[
+              { num: "1", title: "Wissen dokumentieren", desc: "Wie Sie Rezept-Know-how aus Köpfen in Systeme bringen — bevor es zu spät ist." },
+              { num: "2", title: "Einarbeitung beschleunigen", desc: "Neue Mitarbeiter in Tagen statt Wochen produktiv machen." },
+              { num: "3", title: "Qualität standardisieren", desc: "Vom Kontrolleur zum Enabler: Küchenprozesse die funktionieren — ohne den Chef." },
+              { num: "4", title: "Internationale Teams integrieren", desc: "Sprachbarrieren lösen mit visuellen und mehrsprachigen Rezeptunterlagen." },
+              { num: "5", title: "Digitalisierung richtig einsetzen", desc: "Praxistipps für den einfachen Einstieg in die digitale Küche." },
+            ].map((item) => (
+              <li class="flex gap-4">
+                <span class="flex-shrink-0 w-8 h-8 bg-brand-600 text-white text-sm font-bold rounded flex items-center justify-center">
+                  {item.num}
+                </span>
+                <div>
+                  <p class="font-semibold text-avorix-dark text-sm">{item.title}</p>
+                  <p class="text-avorix-gray text-sm">{item.desc}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+
+          <!-- Trust signals -->
+          <div class="flex flex-wrap gap-4 text-sm text-avorix-gray">
+            <span class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              8–10 Seiten, sofort umsetzbar
+            </span>
+            <span class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              PDF, kostenlos
+            </span>
+            <span class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              Kein Spam, jederzeit abmeldbar
+            </span>
+          </div>
+        </div>
+
+        <!-- Right: Download gate form -->
+        <div class="bg-brand-50 border border-brand-100 rounded-2xl p-8">
+          <!-- Form state: default -->
+          <div id="form-container">
+            <h3 class="text-xl font-bold text-avorix-dark mb-1">Jetzt kostenlos herunterladen</h3>
+            <p class="text-sm text-avorix-gray mb-6">Tragen Sie sich ein und erhalten Sie den Leitfaden als PDF.</p>
+
+            <form
+              id="lead-form"
+              action="https://formspree.io/f/xqegwngo"
+              method="POST"
+              class="space-y-4"
+            >
+              <input type="hidden" name="_subject" value="Lead-Magnet: Leitfaden-Download" />
+              <input type="hidden" name="source" value="leitfaden-landing-page" />
+              <input type="hidden" name="_next" value="https://avorix.cloud/leitfaden?download=1" />
+
+              <div>
+                <label for="lead-name" class="block text-sm font-medium text-avorix-dark mb-1">
+                  Ihr Name <span class="text-brand-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="lead-name"
+                  name="name"
+                  required
+                  placeholder="z. B. Maria Huber"
+                  class="w-full px-4 py-2.5 border border-avorix-light rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 bg-white"
+                />
+              </div>
+
+              <div>
+                <label for="lead-email" class="block text-sm font-medium text-avorix-dark mb-1">
+                  E-Mail-Adresse <span class="text-brand-500">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="lead-email"
+                  name="email"
+                  required
+                  placeholder="ihre@email.at"
+                  class="w-full px-4 py-2.5 border border-avorix-light rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 bg-white"
+                />
+              </div>
+
+              <div>
+                <label for="lead-hotel" class="block text-sm font-medium text-avorix-dark mb-1">
+                  Betrieb / Hotel <span class="text-avorix-silver">(optional)</span>
+                </label>
+                <input
+                  type="text"
+                  id="lead-hotel"
+                  name="betrieb"
+                  placeholder="z. B. Hotel Alpenhof"
+                  class="w-full px-4 py-2.5 border border-avorix-light rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500 bg-white"
+                />
+              </div>
+
+              <button
+                type="submit"
+                id="submit-btn"
+                class="w-full bg-brand-600 text-white px-6 py-3 rounded-lg font-semibold text-sm hover:bg-brand-700 active:bg-brand-800 transition-colors flex items-center justify-center gap-2"
+              >
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Leitfaden jetzt herunterladen
+              </button>
+
+              <p class="text-xs text-avorix-silver text-center">
+                Mit dem Absenden stimmen Sie zu, dass wir Sie gelegentlich über Avorix informieren dürfen. Keine Weitergabe an Dritte. Abmeldung jederzeit möglich.
+              </p>
+            </form>
+          </div>
+
+          <!-- Success state (hidden by default, shown after submit) -->
+          <div id="success-container" class="hidden text-center py-4">
+            <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-avorix-dark mb-2">Vielen Dank!</h3>
+            <p class="text-avorix-gray text-sm mb-6">Ihr Download startet automatisch. Falls nicht, klicken Sie auf den Button.</p>
+            <a
+              id="manual-download"
+              href="/downloads/leitfaden-fachkraeftemangel.pdf"
+              download="Avorix-Leitfaden-Fachkraeftemangel.pdf"
+              class="inline-flex items-center gap-2 bg-brand-600 text-white px-6 py-3 rounded-lg font-semibold text-sm hover:bg-brand-700 transition-colors"
+            >
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              PDF herunterladen
+            </a>
+            <p class="text-xs text-avorix-silver mt-4">
+              Interesse an einer Demo?
+              <a href="/kontakt" class="text-brand-600 hover:underline">Demo vereinbaren →</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats / Social Proof strip -->
+  <section class="py-10 bg-brand-50 border-y border-brand-100">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        {[
+          { stat: "82%", label: "der Betriebe klagen über Fachkräftemangel in der Küche" },
+          { stat: "3–6 Wo.", label: "dauert die Einarbeitung in Hotelküchen im Schnitt" },
+          { stat: "Top 20", label: "Rezepte reichen, um die größte Abhängigkeit zu reduzieren" },
+          { stat: "Tag 1", label: "ab dem neue Mitarbeiter nach Standard arbeiten können" },
+        ].map((item) => (
+          <div>
+            <p class="text-2xl font-bold text-brand-600">{item.stat}</p>
+            <p class="text-xs text-avorix-gray mt-1">{item.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- About Avorix teaser -->
+  <section class="py-16 px-6">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="text-sm font-semibold text-brand-600 uppercase tracking-wider mb-3">Über Avorix</p>
+      <h2 class="text-2xl font-bold text-avorix-dark mb-4">Die Avorix Koch App — die Lösung, die dieser Leitfaden beschreibt</h2>
+      <p class="text-avorix-gray mb-6">
+        Avorix setzt genau das digital um, was in diesem Leitfaden als bewährte Strategie beschrieben wird: zentrale Rezeptverwaltung, Schritt-für-Schritt-Anleitungen und konsistente Qualität — auch ohne ausgebildete Köche.
+      </p>
+      <a
+        href="/kontakt"
+        class="inline-block bg-brand-600 text-white px-8 py-3 rounded-lg font-semibold text-sm hover:bg-brand-700 transition-colors"
+      >
+        Demo vereinbaren
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const form = document.getElementById('lead-form') as HTMLFormElement;
+  const formContainer = document.getElementById('form-container');
+  const successContainer = document.getElementById('success-container');
+  const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+
+  // Check if redirected back with ?download=1 (Formspree success redirect)
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('download') === '1') {
+    showSuccess();
+  }
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Wird gesendet…';
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' },
+      });
+
+      if (response.ok) {
+        showSuccess();
+      } else {
+        // Fallback: still show success + trigger download
+        // Even if email fails to save, user gets PDF
+        showSuccess();
+      }
+    } catch {
+      // Network error — show success anyway, trigger download
+      showSuccess();
+    }
+  });
+
+  function showSuccess() {
+    formContainer?.classList.add('hidden');
+    successContainer?.classList.remove('hidden');
+
+    // Auto-trigger download
+    const link = document.createElement('a');
+    link.href = '/downloads/leitfaden-fachkraeftemangel.pdf';
+    link.download = 'Avorix-Leitfaden-Fachkraeftemangel.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // Clean up URL
+    if (window.history.replaceState) {
+      window.history.replaceState({}, document.title, window.location.pathname);
+    }
+  }
+</script>
