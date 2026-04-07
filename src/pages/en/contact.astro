@@ -3,14 +3,53 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import { useTranslations } from "../../i18n/translations";
 
 const t = useTranslations("en");
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Book a Demo — Avorix",
+  "description": "Contact Avorix for a demo or more information about our Kitchen App and kitchen management software for hotels and restaurants.",
+  "url": "https://avorix.cloud/en/contact",
+  "inLanguage": "en",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Avorix",
+    "url": "https://avorix.cloud",
+    "email": "info@avorix.de",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "info@avorix.de",
+      "contactType": "sales",
+      "availableLanguage": ["German", "English"]
+    }
+  }
+};
 ---
 
-<BaseLayout title="Book a Demo" description="Contact Avorix for a demo or more information about our Kitchen App and kitchen management software for hotels and restaurants.">
+<BaseLayout title="Book a Demo" description="Contact Avorix for a demo or more information about our Kitchen App and kitchen management software for hotels and restaurants." schemaOrg={schema}>
   <section class="pt-32 pb-20 px-6">
     <div class="max-w-3xl mx-auto">
       <p class="text-sm font-semibold text-brand-600 uppercase tracking-wider mb-3">{t("contact.eyebrow")}</p>
       <h1 class="text-4xl font-bold text-avorix-dark mb-4">{t("contact.title")}</h1>
-      <p class="text-lg text-avorix-gray mb-12">{t("contact.intro")}</p>
+      <p class="text-lg text-avorix-gray mb-10">{t("contact.intro")}</p>
+
+      <!-- Cal.com Booking Widget -->
+      <div class="bg-brand-50 border border-brand-100 rounded-2xl p-8 mb-12 text-center">
+        <h2 class="text-xl font-semibold text-avorix-dark mb-2">{t("contact.booking.heading")}</h2>
+        <p class="text-avorix-gray mb-6">{t("contact.booking.text")}</p>
+        <!-- TODO: Replace "avorix/demo" with the real Cal.com path -->
+        <button
+          data-cal-link="avorix/demo"
+          data-cal-namespace="avorix-demo"
+          data-cal-config='{"layout":"month_view"}'
+          class="inline-block bg-brand-500 text-white px-8 py-3 rounded-lg font-semibold text-base hover:bg-brand-600 transition-colors cursor-pointer"
+        >
+          {t("contact.booking.button")}
+        </button>
+        <p class="text-sm text-avorix-silver mt-3">{t("contact.booking.note")}</p>
+      </div>
+
+      <p class="text-sm font-semibold text-avorix-dark uppercase tracking-wider mb-8">{t("contact.or")}</p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div class="space-y-6">
@@ -71,3 +110,37 @@ const t = useTranslations("en");
     </div>
   </section>
 </BaseLayout>
+
+<script>
+  // Cal.com Embed — TODO: Replace "avorix/demo" with the real Cal.com path
+  (function (C: any, A: string, L: string) {
+    let p = function (a: any, ar: any) { a.q.push(ar); };
+    let d = C.document;
+    C.Cal = C.Cal || function (...args: any[]) {
+      let cal = C.Cal;
+      if (!cal.loaded) {
+        cal.ns = {};
+        cal.q = cal.q || [];
+        const script = d.createElement("script");
+        script.src = A;
+        d.head.appendChild(script);
+        cal.loaded = true;
+      }
+      if (args[0] === L) {
+        const api = function (...a: any[]) { p(api, a); };
+        const namespace = args[1];
+        (api as any).q = (api as any).q || [];
+        if (typeof namespace === "string") {
+          cal.ns[namespace] = cal.ns[namespace] || api;
+          p(cal.ns[namespace], args);
+          p(cal, [L, namespace, args[2]]);
+        } else {
+          p(cal, args);
+        }
+        return;
+      }
+      p(cal, args);
+    };
+  })(window, "https://app.cal.com/embed/embed.js", "init");
+  (window as any).Cal("init", "avorix-demo", { origin: "https://cal.com" });
+</script>

@@ -3,9 +3,37 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Hero from "../components/Hero.astro";
 import Benefits from "../components/Benefits.astro";
 import CallToAction from "../components/CallToAction.astro";
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Avorix",
+    "url": "https://avorix.cloud",
+    "logo": "https://avorix.cloud/avorix-logo.svg",
+    "description": "Avorix ermöglicht Hotels und Gastronomiebetrieben, qualitativ hochwertige Gerichte konsistent anzubieten — auch ohne ausgebildete Köche.",
+    "email": "info@avorix.de",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "info@avorix.de",
+      "contactType": "sales",
+      "availableLanguage": ["German", "English"]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Avorix",
+    "url": "https://avorix.cloud"
+  }
+];
 ---
 
-<BaseLayout title="Startseite" description="Avorix: Koch App & Rezeptmanagement für Hotels und Gastronomie. Konsistente Speisequalität trotz Fachkräftemangel in der Küche — auch ohne Spitzenkoch.">
+<BaseLayout
+  title="Startseite"
+  description="Avorix: Koch App & Rezeptmanagement für Hotels und Gastronomie. Konsistente Speisequalität trotz Fachkräftemangel in der Küche — auch ohne Spitzenkoch."
+  schemaOrg={schema}
+>
   <Hero />
   <Benefits />
   <CallToAction />

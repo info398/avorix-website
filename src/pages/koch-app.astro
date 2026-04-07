@@ -3,9 +3,31 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { useTranslations } from "../i18n/translations";
 
 const t = useTranslations("de");
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Avorix Koch App",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web, iOS, Android",
+  "description": "Die Avorix Koch App führt Ihr Küchenteam Schritt für Schritt durch jedes Rezept — für konsistente Speisenqualität, unabhängig vom Erfahrungsstand.",
+  "url": "https://avorix.cloud/koch-app",
+  "inLanguage": "de",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "description": "Pilotprogramm — kostenlose Testphase"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Avorix",
+    "url": "https://avorix.cloud"
+  }
+};
 ---
 
-<BaseLayout title="Koch App" description="Die Avorix Koch App führt Ihr Küchenteam Schritt für Schritt durch jedes Rezept — für konsistente Speisenqualität, unabhängig vom Erfahrungsstand.">
+<BaseLayout title="Koch App" description="Die Avorix Koch App führt Ihr Küchenteam Schritt für Schritt durch jedes Rezept — für konsistente Speisenqualität, unabhängig vom Erfahrungsstand." schemaOrg={schema}>
   <!-- Hero -->
   <section class="pt-32 pb-16 px-6 bg-gradient-to-b from-brand-50 to-white">
     <div class="max-w-4xl mx-auto text-center">

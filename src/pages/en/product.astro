@@ -3,11 +3,41 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import { useTranslations } from "../../i18n/translations";
 
 const t = useTranslations("en");
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Avorix Cook App",
+  "alternateName": "Avorix Kitchen Management",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web, iOS, Android",
+  "description": "The Avorix Cook App guides your kitchen team step-by-step through every recipe — with photos, quantities, and timings. For 4-star resort hotels with half-board.",
+  "url": "https://avorix.cloud/en/product",
+  "inLanguage": "en",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "description": "Pilot program for hotels — free trial phase"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Avorix",
+    "url": "https://avorix.cloud"
+  },
+  "featureList": [
+    "Step-by-step recipe guidance with photos",
+    "Automatic quantity scaling",
+    "Offline use in the kitchen",
+    "Real-time quality control"
+  ]
+};
 ---
 
 <BaseLayout
   title="Product — Avorix Cook App"
   description="The Avorix Cook App guides your kitchen team step-by-step through every recipe — with photos, quantities, and timings. For 4-star resort hotels with half-board."
+  schemaOrg={schema}
 >
   <!-- Hero -->
   <section class="pt-32 pb-20 px-6 bg-gradient-to-b from-brand-50 to-white">

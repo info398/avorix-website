@@ -9,6 +9,7 @@ interface Props {
   description?: string;
   ogImage?: string;
   ogType?: string;
+  schemaOrg?: object | object[];
 }
 
 const {
@@ -16,6 +17,7 @@ const {
   description = "Avorix \u2014 Qualit\u00e4t ohne Fachkr\u00e4fte-Abh\u00e4ngigkeit",
   ogImage = "/og-image.png",
   ogType = "website",
+  schemaOrg,
 } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const siteUrl = Astro.site?.toString().replace(/\/$/, "") ?? "https://avorix.cloud";
@@ -53,6 +55,9 @@ const fullTitle = `${title} | Avorix`;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <title>{fullTitle}</title>
+    {schemaOrg && (
+      <script type="application/ld+json" set:html={JSON.stringify(schemaOrg)} />
+    )}
   </head>
   <body class="bg-white text-avorix-dark font-sans antialiased">
     <Header />

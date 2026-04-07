@@ -3,11 +3,41 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import { useTranslations } from "../i18n/translations";
 
 const t = useTranslations("de");
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Avorix Koch App",
+  "alternateName": "Avorix Küchenmanagement",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web, iOS, Android",
+  "description": "Die Avorix Koch App führt Ihr Küchenteam Schritt für Schritt durch jedes Rezept — mit Fotos, Mengenangaben und Zeittakten. Für 4-Sterne-Ferienhotels mit Halbpension.",
+  "url": "https://avorix.cloud/produkt",
+  "inLanguage": "de",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "description": "Pilotprogramm für Hotels — kostenlose Testphase"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Avorix",
+    "url": "https://avorix.cloud"
+  },
+  "featureList": [
+    "Schritt-für-Schritt Rezeptführung mit Fotos",
+    "Automatische Mengenanpassung",
+    "Offline-Nutzung in der Küche",
+    "Echtzeit-Qualitätskontrolle"
+  ]
+};
 ---
 
 <BaseLayout
   title="Produkt — Avorix Koch App"
   description="Die Avorix Koch App führt Ihr Küchenteam Schritt für Schritt durch jedes Rezept — mit Fotos, Mengenangaben und Zeittakten. Für 4-Sterne-Ferienhotels mit Halbpension."
+  schemaOrg={schema}
 >
   <!-- Hero -->
   <section class="pt-32 pb-20 px-6 bg-gradient-to-b from-brand-50 to-white">

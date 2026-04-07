@@ -3,9 +3,31 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import { useTranslations } from "../../i18n/translations";
 
 const t = useTranslations("en");
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Avorix Cook App",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web, iOS, Android",
+  "description": "The Avorix Cook App guides your kitchen team step-by-step through every recipe — for consistent food quality, regardless of experience level.",
+  "url": "https://avorix.cloud/en/cook-app",
+  "inLanguage": "en",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR",
+    "description": "Pilot program — free trial phase"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Avorix",
+    "url": "https://avorix.cloud"
+  }
+};
 ---
 
-<BaseLayout title="Cook App" description="The Avorix Cook App guides your kitchen team step-by-step through every recipe — for consistent food quality, regardless of experience level.">
+<BaseLayout title="Cook App" description="The Avorix Cook App guides your kitchen team step-by-step through every recipe — for consistent food quality, regardless of experience level." schemaOrg={schema}>
   <!-- Hero -->
   <section class="pt-32 pb-16 px-6 bg-gradient-to-b from-brand-50 to-white">
     <div class="max-w-4xl mx-auto text-center">
