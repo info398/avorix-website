@@ -20,6 +20,9 @@ const t = useTranslations(lang);
       <a href={getLocalizedPath(lang === "de" ? "/ueber-uns" : "/about", lang)} class="text-avorix-gray hover:text-avorix-dark transition-colors text-sm font-medium">
         {t("nav.about")}
       </a>
+      <a href={getLocalizedPath(lang === "de" ? "/koch-app" : "/cook-app", lang)} class="text-avorix-gray hover:text-avorix-dark transition-colors text-sm font-medium">
+        {t("nav.kochapp")}
+      </a>
       <a href={getLocalizedPath(lang === "de" ? "/kontakt" : "/contact", lang)} class="bg-brand-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-brand-600 transition-colors">
         {t("nav.contact")}
       </a>
@@ -42,6 +45,9 @@ const t = useTranslations(lang);
       </a>
       <a href={getLocalizedPath(lang === "de" ? "/ueber-uns" : "/about", lang)} class="text-avorix-gray hover:text-avorix-dark text-sm font-medium">
         {t("nav.about")}
+      </a>
+      <a href={getLocalizedPath(lang === "de" ? "/koch-app" : "/cook-app", lang)} class="text-avorix-gray hover:text-avorix-dark text-sm font-medium">
+        {t("nav.kochapp")}
       </a>
       <a href={getLocalizedPath(lang === "de" ? "/kontakt" : "/contact", lang)} class="text-avorix-gray hover:text-avorix-dark text-sm font-medium">
         {t("nav.contact")}

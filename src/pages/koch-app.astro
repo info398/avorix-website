@@ -1,0 +1,90 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { useTranslations } from "../i18n/translations";
+
+const t = useTranslations("de");
+---
+
+<BaseLayout title="Koch App" description="Die Avorix Koch App führt Ihr Küchenteam Schritt für Schritt durch jedes Rezept — für konsistente Speisenqualität, unabhängig vom Erfahrungsstand.">
+  <!-- Hero -->
+  <section class="pt-32 pb-16 px-6 bg-gradient-to-b from-brand-50 to-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="inline-block text-brand-500 font-semibold text-sm uppercase tracking-widest mb-4">Avorix Koch App</span>
+      <h1 class="text-4xl md:text-5xl font-bold text-avorix-dark mb-6 leading-tight">
+        {t("kochapp.tagline")}
+      </h1>
+      <p class="text-xl text-avorix-gray leading-relaxed max-w-2xl mx-auto mb-10">
+        {t("kochapp.intro")}
+      </p>
+      <a href="/kontakt" class="inline-block bg-brand-500 text-white px-8 py-3 rounded-lg font-semibold text-base hover:bg-brand-600 transition-colors">
+        {t("kochapp.cta.button")}
+      </a>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="py-20 px-6">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold text-avorix-dark text-center mb-14">{t("kochapp.how.title")}</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div class="text-center">
+          <div class="w-14 h-14 bg-brand-100 rounded-full flex items-center justify-center mx-auto mb-5">
+            <span class="text-2xl font-bold text-brand-600">1</span>
+          </div>
+          <h3 class="text-lg font-semibold text-avorix-dark mb-3">{t("kochapp.how.step1.title")}</h3>
+          <p class="text-avorix-gray leading-relaxed">{t("kochapp.how.step1.text")}</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 bg-brand-100 rounded-full flex items-center justify-center mx-auto mb-5">
+            <span class="text-2xl font-bold text-brand-600">2</span>
+          </div>
+          <h3 class="text-lg font-semibold text-avorix-dark mb-3">{t("kochapp.how.step2.title")}</h3>
+          <p class="text-avorix-gray leading-relaxed">{t("kochapp.how.step2.text")}</p>
+        </div>
+        <div class="text-center">
+          <div class="w-14 h-14 bg-brand-100 rounded-full flex items-center justify-center mx-auto mb-5">
+            <span class="text-2xl font-bold text-brand-600">3</span>
+          </div>
+          <h3 class="text-lg font-semibold text-avorix-dark mb-3">{t("kochapp.how.step3.title")}</h3>
+          <p class="text-avorix-gray leading-relaxed">{t("kochapp.how.step3.text")}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-20 px-6 bg-neutral-50">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl font-bold text-avorix-dark text-center mb-14">{t("kochapp.features.title")}</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div class="bg-white rounded-xl p-7 border border-avorix-light">
+          <h3 class="text-lg font-semibold text-avorix-dark mb-3">{t("kochapp.features.1.title")}</h3>
+          <p class="text-avorix-gray leading-relaxed">{t("kochapp.features.1.text")}</p>
+        </div>
+        <div class="bg-white rounded-xl p-7 border border-avorix-light">
+          <h3 class="text-lg font-semibold text-avorix-dark mb-3">{t("kochapp.features.2.title")}</h3>
+          <p class="text-avorix-gray leading-relaxed">{t("kochapp.features.2.text")}</p>
+        </div>
+        <div class="bg-white rounded-xl p-7 border border-avorix-light">
+          <h3 class="text-lg font-semibold text-avorix-dark mb-3">{t("kochapp.features.3.title")}</h3>
+          <p class="text-avorix-gray leading-relaxed">{t("kochapp.features.3.text")}</p>
+        </div>
+        <div class="bg-white rounded-xl p-7 border border-avorix-light">
+          <h3 class="text-lg font-semibold text-avorix-dark mb-3">{t("kochapp.features.4.title")}</h3>
+          <p class="text-avorix-gray leading-relaxed">{t("kochapp.features.4.text")}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 px-6">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-avorix-dark mb-5">{t("kochapp.cta.title")}</h2>
+      <p class="text-lg text-avorix-gray mb-8 leading-relaxed">{t("kochapp.cta.text")}</p>
+      <a href="/kontakt" class="inline-block bg-brand-500 text-white px-8 py-3 rounded-lg font-semibold text-base hover:bg-brand-600 transition-colors">
+        {t("kochapp.cta.button")}
+      </a>
+    </div>
+  </section>
+</BaseLayout>
