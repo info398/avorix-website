@@ -16,6 +16,7 @@ if (lang === "de") {
   else if (pathname === "/impressum") otherPath = "/en/legal-notice";
   else if (pathname === "/datenschutz") otherPath = "/en/privacy";
   else if (pathname === "/koch-app") otherPath = "/en/cook-app";
+  else if (pathname === "/produkt") otherPath = "/en/product";
   else otherPath = `/en${pathname}`;
 } else {
   // EN -> DE
@@ -25,6 +26,7 @@ if (lang === "de") {
   else if (pathname === "/en/legal-notice") otherPath = "/impressum";
   else if (pathname === "/en/privacy") otherPath = "/datenschutz";
   else if (pathname === "/en/cook-app") otherPath = "/koch-app";
+  else if (pathname === "/en/product") otherPath = "/produkt";
   else otherPath = pathname.replace(/^\/en/, "");
 }
 ---
