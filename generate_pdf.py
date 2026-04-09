@@ -233,7 +233,7 @@ def draw_cover(c):
     photo_y = FOOTER_H
     photo_h = title_y - photo_y - 5
     if photo_h > 60:
-        draw_image_fill(c, IMGS['gastro_104'], 0, photo_y, W, photo_h)
+        draw_image_fill(c, IMGS['kitchen_branded'], 0, photo_y, W, photo_h)
         # Subtle dark tint at bottom to protect footer text
         c.setFillColor(Color(0, 0, 0, 0.25))
         c.rect(0, photo_y, W, 35, fill=1, stroke=0)
@@ -257,12 +257,6 @@ def draw_intro(c):
     draw_image_fill(c, IMGS['gastro_60'], 0, H - HEADER_H - photo_h, W, photo_h)
 
     y = H - HEADER_H - photo_h - 18
-
-    # Section label
-    c.setFont('Inter-Bold', 7.5)
-    c.setFillColor(BLUE)
-    c.drawString(ML, y, 'EINLEITUNG')
-    y -= 16
 
     # Main heading
     c.setFont('Inter-Bold', 21)
@@ -436,12 +430,6 @@ def draw_strategy(c, s):
     cw = TEXT_COL_W
     y = H - HEADER_H - 18
 
-    # Strategy label
-    c.setFont('Inter-SemiBold', 7.5)
-    c.setFillColor(BLUE)
-    c.drawString(x + 34, y, f'STRATEGIE {s["num"]}')
-    y -= 5
-
     # Badge + title
     badge_sz = 28
     draw_badge(c, s['num'], x, y, badge_sz)
@@ -495,11 +483,6 @@ def draw_summary(c):
     draw_page_footer(c, 7)
 
     y = H - HEADER_H - 22
-
-    c.setFont('Inter-Bold', 7.5)
-    c.setFillColor(BLUE)
-    c.drawString(ML, y, 'ZUSAMMENFASSUNG')
-    y -= 17
 
     c.setFont('Inter-Bold', 22)
     c.setFillColor(DARK)
