@@ -224,7 +224,7 @@ def draw_cover(c):
     title_y -= 8
 
     # Subtitle
-    subtitle = 'Ein praxisnaher Leitfaden für Hoteliers und Küchenchefs in Tirol & Salzburg'
+    subtitle = 'Ein praxisnaher Leitfaden für Hoteliers und Küchenchefs im DACH-Raum'
     title_y = draw_text_block(c, subtitle, ML, title_y, W - ML - MR,
                                'Inter', 13, Color(1, 1, 1, 0.8), 18)
     title_y -= 28
@@ -675,7 +675,7 @@ output_path = 'public/downloads/leitfaden-fachkraeftemangel.pdf'
 c = rl_canvas.Canvas(output_path, pagesize=A4)
 c.setTitle('5 Strategien gegen den Fachkräftemangel in der Küche – Avorix')
 c.setAuthor('Avorix')
-c.setSubject('Leitfaden für Hoteliers und Küchenchefs in Tirol & Salzburg')
+c.setSubject('Leitfaden für Hoteliers und Küchenchefs im DACH-Raum')
 
 draw_cover(c)
 c.showPage()

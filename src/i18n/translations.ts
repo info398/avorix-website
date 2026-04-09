@@ -40,7 +40,7 @@ export const ui = {
       "Der Fachkr\u00e4ftemangel in der Gastronomie ist strukturell. Wir glauben, dass Technologie die L\u00fccke schlie\u00dfen kann \u2014 nicht als Ersatz f\u00fcr gute K\u00f6che, sondern als Werkzeug, das jedem K\u00fcchenteam erm\u00f6glicht, auf hohem Niveau zu arbeiten.",
     "about.focus.title": "Unser Fokus",
     "about.focus.text":
-      "Wir starten mit 4-Sterne-Ferienhotels in Tirol und Salzburg \u2014 Betrieben, in denen Halbpension das Kernversprechen ist und die K\u00fcche t\u00e4glich unter Druck steht, konstante Qualit\u00e4t zu liefern.",
+      "Wir starten mit 4-Sterne-Ferienhotels im DACH-Raum \u2014 Betrieben, in denen Halbpension das Kernversprechen ist und die K\u00fcche t\u00e4glich unter Druck steht, konstante Qualit\u00e4t zu liefern.",
     "contact.eyebrow": "Kostenloses Erstgespräch",
     "contact.title": "Demo vereinbaren",
     "contact.intro":
@@ -90,7 +90,7 @@ export const ui = {
     "produkt.cta.secondary": "Mehr zur App",
     "produkt.cta.note": "Kostenlos & unverbindlich",
     "produkt.target.title": "Gemacht für 4-Sterne-Ferienhotels",
-    "produkt.target.text": "Avorix ist speziell entwickelt für Hotels mit Halbpensions-Angebot in Tirol und Salzburg — Betriebe, in denen die Küche täglich unter Druck steht, konstante Qualität für Gäste auf hohem Niveau zu liefern.",
+    "produkt.target.text": "Avorix ist speziell entwickelt für Hotels mit Halbpensions-Angebot im DACH-Raum — Betriebe, in denen die Küche täglich unter Druck steht, konstante Qualität für Gäste auf hohem Niveau zu liefern.",
     "produkt.target.stat1.number": "82%",
     "produkt.target.stat1.label": "der Betriebe melden Fachkräftemangel in der Küche",
     "produkt.target.stat2.number": "2–3×",
@@ -156,7 +156,7 @@ export const ui = {
       "The skilled labor shortage in hospitality is structural. We believe technology can bridge the gap — not as a replacement for good chefs, but as a tool that enables every kitchen team to operate at a high level.",
     "about.focus.title": "Our Focus",
     "about.focus.text":
-      "We start with 4-star resort hotels in Tyrol and Salzburg — properties where half-board is the core promise and the kitchen faces daily pressure to deliver consistent quality.",
+      "We start with 4-star resort hotels across the DACH region — properties where half-board is the core promise and the kitchen faces daily pressure to deliver consistent quality.",
     "contact.eyebrow": "Free Initial Consultation",
     "contact.title": "Book a Demo",
     "contact.intro": "Get to know Avorix in a personal demo call. We'll show you exactly how our solution supports your kitchen operations.",
@@ -205,7 +205,7 @@ export const ui = {
     "produkt.cta.secondary": "Learn more",
     "produkt.cta.note": "Free & no obligation",
     "produkt.target.title": "Built for 4-Star Resort Hotels",
-    "produkt.target.text": "Avorix is specifically designed for hotels with half-board offerings in Tyrol and Salzburg — properties where the kitchen faces daily pressure to deliver consistent quality for discerning guests.",
+    "produkt.target.text": "Avorix is specifically designed for hotels with half-board offerings across the DACH region — properties where the kitchen faces daily pressure to deliver consistent quality for discerning guests.",
     "produkt.target.stat1.number": "82%",
     "produkt.target.stat1.label": "of operations report a shortage of skilled kitchen staff",
     "produkt.target.stat2.number": "2–3×",
