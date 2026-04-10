@@ -256,7 +256,7 @@ def draw_intro(c):
     photo_h = 195
     draw_image_fill(c, IMGS['gastro_60'], 0, H - HEADER_H - photo_h, W, photo_h)
 
-    y = H - HEADER_H - photo_h - 18
+    y = H - HEADER_H - photo_h - 62
 
     # Main heading
     c.setFont('Inter-Bold', 21)
