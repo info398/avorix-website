@@ -428,7 +428,7 @@ def draw_strategy(c, s):
     # Content column
     x = ML
     cw = TEXT_COL_W
-    y = H - HEADER_H - 18
+    y = H - HEADER_H - 45
 
     # Badge + title
     badge_sz = 28
@@ -482,7 +482,7 @@ def draw_summary(c):
     draw_page_header(c)
     draw_page_footer(c, 7)
 
-    y = H - HEADER_H - 22
+    y = H - HEADER_H - 45
 
     c.setFont('Inter-Bold', 22)
     c.setFillColor(DARK)
